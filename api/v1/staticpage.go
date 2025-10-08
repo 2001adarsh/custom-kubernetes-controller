@@ -15,7 +15,7 @@ type StaticPage struct {
 type StaticPageSpec struct {
     Contents string `json:"contents,omitempty"`
     Image    string `json:"image,omitempty"`
-    Replicas int32  `json:"replicas,omitempty"`
+    Replicas int  `json:"replicas,omitempty"`
 }
 
 // +kubebuilder:object:root=true
