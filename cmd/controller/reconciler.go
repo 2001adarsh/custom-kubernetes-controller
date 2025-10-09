@@ -32,8 +32,8 @@ func (r *StaticPageReconciler) Reconcile(ctx context.Context, req ctrl.Request) 
 	log.Info("reconciling static page")
 
 	// create deployment, if not exists
-	deploymentClient := r.KubeClient.AppsV1().Deployments(req.Name)
-	cmClient := r.KubeClient.CoreV1().ConfigMaps(req.Name)
+	deploymentClient := r.KubeClient.AppsV1().Deployments(req.Namespace)
+	cmClient := r.KubeClient.CoreV1().ConfigMaps(req.Namespace)
 
 	staticPageName := "staticpage-" + req.Name
 
