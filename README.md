@@ -24,4 +24,6 @@ grep 'client-key-data' ~/.kube/config | awk '{print $2}' | base64 -d > /tmp/k8s-
 
   <img width="1793" height="697" alt="image" src="https://github.com/user-attachments/assets/b70daa5f-004f-4e28-91d0-8612b8f59898" />
 
--
+- Applying example.com should, trigger the reconciler:
+<img width="1673" height="505" alt="image" src="https://github.com/user-attachments/assets/8fe1bec2-2caa-4f09-97f8-b226199cbef2" />
+
