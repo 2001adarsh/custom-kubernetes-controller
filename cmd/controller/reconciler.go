@@ -18,13 +18,16 @@ import (
 
 // StaticPageReconciler reconciles a StaticPage object
 type StaticPageReconciler struct {
-	Client client.Client
+	client.Client
 	Scheme     *runtime.Scheme
 	KubeClient *kubernetes.Clientset
 }
 
 // Reconcile is the main loop: Fetch, compare desired vs actual, act
 func (r *StaticPageReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
+
+	fmt.Printf("Adarsh %+v\n\n", req)
+
 	log := log.FromContext(ctx).WithValues("staticpage", req.NamespacedName)
 	log.Info("reconciling static page")
 
